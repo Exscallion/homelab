@@ -93,7 +93,7 @@
      kitty
 
      # File browsar
-     thunar
+     xfce.thunar
 
      # Greeter
      tuigreet

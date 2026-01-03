@@ -33,9 +33,32 @@
     "flakes"
   ];
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # Enable Hyprland
+  hardware.opengl.enable = true;
+
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
+  services.greetd = {
+    enable = true;
+    settings.default_session = {
+      command = "tuigreet --cmd Hyprland";
+      user = "zeta";
+    };
+  };
+
+  services.libinput.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+    ];
+  };
+
+
 
   security.rtkit.enable = true;
   services.pipewire = {
@@ -50,7 +73,7 @@
   users.users.zeta = {
     isNormalUser = true;
     description = "Zeta";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel", "video" ];
     packages = with pkgs; [
     ];
   };
@@ -58,12 +81,32 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+
+
+     # Hyprland
+     waybar
+     hyprpaper
+     hyprlock
+     hypridle
+
+     # Utilities
+     wl-clipboard
+     wofi
+
+     # Greeter
+     tuigreet
+
+     # Misc
      nano
      git
      brave
      lm_sensors
      nvtopPackages.amd
      htop
+  ];
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
   ];
 
 

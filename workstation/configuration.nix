@@ -9,6 +9,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Zen kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   networking.hostName = "palica";
   networking.networkmanager.enable = true;
 

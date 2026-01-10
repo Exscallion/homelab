@@ -29,11 +29,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1767280655,
-        "narHash": "sha256-YmaYMduV5ko8zURUT1VLGDbVC1L/bxHS0NsiPoZ6bBM=",
+        "lastModified": 1767910483,
+        "narHash": "sha256-MOU5YdVu4DVwuT5ztXgQpPuRRBjSjUGIdUzOQr9iQOY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "d49d2543f02dbd789ed032188c84570d929223cb",
+        "rev": "82fb7dedaad83e5e279127a38ef410bcfac6d77c",
         "type": "github"
       },
       "original": {
@@ -71,6 +71,31 @@
         "nixpkgs": [
           "selfRepository",
           "selfRepository",
+          "selfRepository",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1767280655,
+        "narHash": "sha256-YmaYMduV5ko8zURUT1VLGDbVC1L/bxHS0NsiPoZ6bBM=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "d49d2543f02dbd789ed032188c84570d929223cb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "release-25.11",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_5": {
+      "inputs": {
+        "nixpkgs": [
+          "selfRepository",
+          "selfRepository",
+          "selfRepository",
           "homelab",
           "nixpkgs"
         ]
@@ -92,8 +117,8 @@
     },
     "homelab": {
       "inputs": {
-        "home-manager": "home-manager_4",
-        "nixpkgs": "nixpkgs_3"
+        "home-manager": "home-manager_5",
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "dir": "workstation",
@@ -129,11 +154,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1767047869,
-        "narHash": "sha256-tzYsEzXEVa7op1LTnrLSiPGrcCY6948iD0EcNLWcmzo=",
+        "lastModified": 1767799921,
+        "narHash": "sha256-r4GVX+FToWVE2My8VVZH4V0pTIpnu2ZE8/Z4uxGEMBE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "89dbf01df72eb5ebe3b24a86334b12c27d68016a",
+        "rev": "d351d0653aeb7877273920cd3e823994e7579b0b",
         "type": "github"
       },
       "original": {
@@ -175,6 +200,22 @@
         "type": "github"
       }
     },
+    "nixpkgs_5": {
+      "locked": {
+        "lastModified": 1767047869,
+        "narHash": "sha256-tzYsEzXEVa7op1LTnrLSiPGrcCY6948iD0EcNLWcmzo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "89dbf01df72eb5ebe3b24a86334b12c27d68016a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -187,6 +228,29 @@
         "home-manager": "home-manager_2",
         "nixpkgs": "nixpkgs_2",
         "selfRepository": "selfRepository_2"
+      },
+      "locked": {
+        "dir": "workstation",
+        "lastModified": 1768081920,
+        "narHash": "sha256-cFs4mBL+BSv2XjHFfPffNf+UJ+xRZn3F3rTNwiXlTLE=",
+        "owner": "DrSkitterbug",
+        "repo": "homelab",
+        "rev": "df6a49eeef5e8a804f18852b3a684d46b314cf90",
+        "type": "github"
+      },
+      "original": {
+        "dir": "workstation",
+        "owner": "DrSkitterbug",
+        "ref": "feat-load-files-via-home-manager",
+        "repo": "homelab",
+        "type": "github"
+      }
+    },
+    "selfRepository_2": {
+      "inputs": {
+        "home-manager": "home-manager_3",
+        "nixpkgs": "nixpkgs_3",
+        "selfRepository": "selfRepository_3"
       },
       "locked": {
         "dir": "workstation",
@@ -205,11 +269,11 @@
         "type": "github"
       }
     },
-    "selfRepository_2": {
+    "selfRepository_3": {
       "inputs": {
-        "home-manager": "home-manager_3",
+        "home-manager": "home-manager_4",
         "homelab": "homelab",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "dir": "workstation",

@@ -9,7 +9,7 @@
     userData.url = "github:DrSkitterbug/homelab?dir=workstation-data";
   };
 
-  outputs = { self, nixpkgs, home-manager, data, ... } @inputs: {
+  outputs = { self, nixpkgs, home-manager, userData, ... } @inputs: {
     nixosConfigurations = {
       palica = nixpkgs.lib.nixosSystem {
         modules = [

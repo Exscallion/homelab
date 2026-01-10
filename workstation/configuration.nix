@@ -109,6 +109,10 @@
      nvtopPackages.amd
      htop
   ];
+  
+  # Thunar services, thumbnails and mounts and trashbin support.
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

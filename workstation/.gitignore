@@ -1,1 +1,10 @@
+# Lapce auto-save
 *.save
+
+# Personal wallpapers
+*.kra
+*.png
+*.jp*g
+
+# Krita auto save
+*~

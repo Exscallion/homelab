@@ -6,6 +6,8 @@
   home.packages = with pkgs; [
     neofetch
     xfce.mousepad
+    krita
+    swayimg
   ];
 
   # IDE and text editing
@@ -18,9 +20,14 @@
       defaultApplications = {
         "text/plain" = [ "mousepad.desktop" ];
         "text/x-nix" = [ "lapce.desktop" ];
+        "image/jpeg" = [ "swayimg.desktop" "krita.desktop" ];
+        "image/png" = [ "swayimg.desktop" "krita.desktop" ];
+        "image/gif" = [ "swayimg.desktop" "krita.desktop" ];
+        "image/bmp" = [ "swayimg.desktop" "krita.desktop" ];
+        "image/webp" = [ "swayimg.desktop" "krita.desktop" ];
       };
     };
   };
 
   home.stateVersion = "25.11";
-} 
+}

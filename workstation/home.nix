@@ -1,4 +1,4 @@
-{ pkgs, selfRepository, ... }:
+{ pkgs, userData, ... }:
 let
   user = "zeta";
   homeDir = "/home/${user}";

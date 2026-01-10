@@ -1,7 +1,7 @@
 !#/bin/bash
 
 # Update our flake repository
-nix flake update selfRepository
+nix flake update userData
 
 # Rebuild and switch.
 sudo nixos-rebuild switch --flake .#palica

@@ -42,9 +42,9 @@ in
   
   # Let home manager manage the configuration and other files.
   home.file = {
-    ".config/hypr" = { source = "${selfRepository}/config/hypr"; recursive = true;};
-    ".config/Thunar" = { source = "${selfRepository}/config/Thunar"; recursive = true; };
-    ".files/wallpapers" = { source = "${selfRepository}/files/wallpapers"; recursive = true; };  
+    ".config/hypr" = { source = "${userData}/config/hypr"; recursive = true;};
+    ".config/Thunar" = { source = "${userData}/config/Thunar"; recursive = true; };
+    ".files/wallpapers" = { source = "${userData}/files/wallpapers"; recursive = true; };  
   };
 
   home.stateVersion = "25.11";

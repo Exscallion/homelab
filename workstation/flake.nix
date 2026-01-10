@@ -6,10 +6,10 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     
-    selfRepository.url = "github:DrSkitterbug/homelab?dir=workstation";
+    userData.url = "github:DrSkitterbug/homelab?dir=workstation-data";
   };
 
-  outputs = { self, nixpkgs, home-manager, selfRepository, ... } @inputs: {
+  outputs = { self, nixpkgs, home-manager, data, ... } @inputs: {
     nixosConfigurations = {
       palica = nixpkgs.lib.nixosSystem {
         modules = [
@@ -20,7 +20,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.zeta = import ./home.nix {
               pkgs = nixpkgs.legacyPackages."x86_64-linux";
-              selfRepository = selfRepository;
+              userData = userData;
             };
           }
         ];

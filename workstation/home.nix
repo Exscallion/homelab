@@ -1,7 +1,11 @@
-{ pkgs, selfRepository, ... }:
+{ pkgs, lib, selfRepository, ... }:
+let
+  user = "zeta";
+  homeDir = "/home/${user}";
+in
 {
-  home.username = "zeta";
-  home.homeDirectory = "/home/zeta";
+  home.username = user;
+  home.homeDirectory = homeDir;
   
   #Install default packages that aren't nix modules.
   home.packages = with pkgs; [
@@ -31,24 +35,16 @@
     };
   };
   
+  home.activation.cleanupConfigDirs = ''
+    rm -rf ${homeDir}/.config/hypr
+    rm -rf ${homeDir}/.config/Thunar
+  '';
+  
   # Let home manager manage the configuration and other files.
   home.file = {
-    ".config/hypr" = {
-      source = "${selfRepository}/config/hypr";
-      recursive = true;
-      force = true;
-    };
-    
-    ".config/Thunar" = {
-      source = "${selfRepository}/config/Thunar";
-      recursive = true;
-      force = true;
-    };
-
-    ".files/wallpapers" = {
-      source = "${selfRepository}/files/wallpapers";
-      recursive = true;
-    };  
+    ".config/hypr" = { source = "${selfRepository}/config/hypr"; recursive = true;};
+    ".config/Thunar" = { source = "${selfRepository}/config/Thunar"; recursive = true; };
+    ".files/wallpapers" = { source = "${selfRepository}/files/wallpapers"; recursive = true; };  
   };
 
   home.stateVersion = "25.11";

@@ -1,8 +1,4 @@
-{ pkgs, homelab, ... }:
-
-let
-  repo = "${homelab}";
-in
+{ pkgs, selfRepository, ... }:
 {
   home.username = "zeta";
   home.homeDirectory = "/home/zeta";
@@ -38,19 +34,19 @@ in
   # Let home manager manage the configuration and other files.
   home.file = {
     ".config/hypr" = {
-      source = "${repo}/config/hypr";
+      source = "${selfRepository}/config/hypr";
       recursive = true;
       force = true;
     };
     
     ".config/Thunar" = {
-      source = "${repo}/config/Thunar";
+      source = "${selfRepository}/config/Thunar";
       recursive = true;
       force = true;
     };
 
     ".files/wallpapers" = {
-      source = "${repo}/files/wallpapers";
+      source = "${selfRepository}/files/wallpapers";
       recursive = true;
     };  
   };

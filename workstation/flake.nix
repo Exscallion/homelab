@@ -20,7 +20,6 @@
             home-manager.useUserPackages = true;
             home-manager.users.zeta = import ./home.nix {
               pkgs = nixpkgs.legacyPackages."x86_64-linux";
-              lib = nixpkgs.lib;
               selfRepository = selfRepository;
             };
           }

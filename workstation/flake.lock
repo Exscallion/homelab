@@ -39,11 +39,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1768153559,
-        "narHash": "sha256-7dFcFz8DG0OLxjvMle/gAdJDCpiZjy14kTYQ0Ag6FeE=",
+        "lastModified": 1768158432,
+        "narHash": "sha256-bg+j/8jAs+kTfkwuM1dv38u6YymiaMspVYiN+dTQrow=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e5cb718166eff35ec63a12edcff9192edb63b3b0",
+        "rev": "bea58e23250e5e4b0127b11792c089c2e2671363",
         "type": "github"
       },
       "original": {
@@ -65,11 +65,11 @@
       },
       "locked": {
         "dir": "workstation-data",
-        "lastModified": 1768086244,
-        "narHash": "sha256-FRPiGghJcJqi3LNZpwCioRyGrN7jsji7zKgTMSNw8Qs=",
+        "lastModified": 1768156704,
+        "narHash": "sha256-UWPaYAv7DSBkYRj/0VGdGB415VLuijd63zwAQcYzHxw=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "ec685c15b181803b03a5180d1698b8c8b6360af7",
+        "rev": "5ce53e37157c376ef9e4b9231a44c2521bfd1b34",
         "type": "github"
       },
       "original": {

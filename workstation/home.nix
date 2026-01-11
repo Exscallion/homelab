@@ -35,9 +35,15 @@ in
     };
   };
   
+  # Clean the folders upon new install.
+  # - Clean configuration folders
+  # - Clean folders relating to font rendering (BraveSoftware and fontconfig)
   home.activation.cleanupConfigDirs = ''
     rm -rf ${homeDir}/.config/hypr
     rm -rf ${homeDir}/.config/Thunar
+
+    rm -rf ${homeDir}/.cache/BraveSoftware
+    rm -rf ${homeDir}/.cache/fontconfig
   '';
   
   # Let home manager manage the configuration and other files.

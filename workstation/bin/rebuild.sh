@@ -24,13 +24,13 @@ echo "*** Verifying GitHub authentication"
 if ! gh auth status > /dev/null 2>&1; then
   echo "Not logged in, follow instructions CLI suggests."
   gh auth login
-else 
-  GHTOKEN=$(gh auth token)
-  export NIX_CONFIG="access-tokens = github.com=$GHTOKEN"
-  
-  echo "GitHub token: ${GHTOKEN:0:5}*****************************${GHTOKEN: -5}"
-  echo "Updated NIX_CONFIG with access token."
 fi
+
+GHTOKEN=$(gh auth token)
+export NIX_CONFIG="access-tokens = github.com=$GHTOKEN"
+
+echo "GitHub token: ${GHTOKEN:0:5}*****************************${GHTOKEN: -5}"
+echo "Updated NIX_CONFIG with access token."
 
 # Update our flake repository
 echo "*** Updating userData flake from GitHub."

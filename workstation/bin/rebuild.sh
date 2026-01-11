@@ -10,13 +10,13 @@ echo "*** Running pre-flight checks..."
 
 REQUIRED_CMDS=(nix sudo pkill hyprctl)
 for cmd in "${REQUIRED_CMDS[@]}"; do
-    if ! command -v "$cmd" >/dev/null 2>&1; then
-        echo "MISSING CMD $cmd;"
-        echo "Please install $cmd on your system."
-        exit 1
-    else
-      echo "FOUND CMD $cmd;"
-    fi
+  if ! command -v "$cmd" >/dev/null 2>&1; then
+    echo "MISSING CMD $cmd;"
+    echo "Please install $cmd on your system."
+    exit 1
+  else
+    echo "FOUND CMD $cmd;"
+  fi
 done
 
 echo "*** Verifying GitHub authentication"

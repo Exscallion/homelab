@@ -1,4 +1,4 @@
-{ pkgs, userData, ... }:
+{ pkgs, userData, agenix, ... }:
 let
   user = "zeta";
   homeDir = "/home/${user}";
@@ -13,6 +13,9 @@ in
     xfce.mousepad
     krita
     swayimg
+    gnupg
+    agenix.packages.x86_64-linux.default
+    age
   ];
 
   # Lapce Nix module for IDE and text editing

@@ -60,6 +60,7 @@ in
   home.file = {
     ".config/hypr" = { source = "${userData}/config/hypr"; recursive = true;};
     ".config/Thunar" = { source = "${userData}/config/Thunar"; recursive = true; };
+    ".files/scripts" = { source = "${userData}/files/scripts"; recursive = true; };  
     ".files/wallpapers" = { source = "${userData}/files/wallpapers"; recursive = true; };  
   };
 

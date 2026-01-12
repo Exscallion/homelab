@@ -83,19 +83,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-<<<<<<< HEAD
-        "lastModified": 1768238300,
-        "narHash": "sha256-CmqIBeoCo1mV/64hLLlVMta843rgFKy4LFoVOE7UyU4=",
+        "lastModified": 1768241281,
+        "narHash": "sha256-DzWHApvnqeEDMU1GIoRzOD+2C++qLBQGL7SF7I+/HPc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "fb40caa4338195f4a4beb188b6ddef8b1620eb15",
-=======
-        "lastModified": 1768158432,
-        "narHash": "sha256-bg+j/8jAs+kTfkwuM1dv38u6YymiaMspVYiN+dTQrow=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "bea58e23250e5e4b0127b11792c089c2e2671363",
->>>>>>> origin/main
+        "rev": "e23c47dc98afa989c9d71b6ffc0f25cbe1298df5",
         "type": "github"
       },
       "original": {
@@ -133,19 +125,11 @@
       },
       "locked": {
         "dir": "workstation-data",
-<<<<<<< HEAD
-        "lastModified": 1768238626,
-        "narHash": "sha256-gkHijtuofRV8AdarFIcZ3ovWCD+oXN10EaZZxmTOPB0=",
+        "lastModified": 1768241356,
+        "narHash": "sha256-ZvDHHqPJrjtP+CECbfBsS/RE67tuLY8kZZNlPBS30Pg=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "4f2ad2ced521fd86d22eea1c7b2c794b4bd670d9",
-=======
-        "lastModified": 1768156704,
-        "narHash": "sha256-UWPaYAv7DSBkYRj/0VGdGB415VLuijd63zwAQcYzHxw=",
-        "owner": "DrSkitterbug",
-        "repo": "homelab",
-        "rev": "5ce53e37157c376ef9e4b9231a44c2521bfd1b34",
->>>>>>> origin/main
+        "rev": "61784ef5bd3226e5126b7ef523d45a0ed7a5cbbd",
         "type": "github"
       },
       "original": {

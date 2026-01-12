@@ -83,11 +83,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1768254385,
-        "narHash": "sha256-89jSiP/xMETx8fVOfCKEpKdlmRcRzJZrMzlgYAOdUzc=",
+        "lastModified": 1768256272,
+        "narHash": "sha256-35q4qf/CCyfQvED/VgC48Smx+GAokPHo6l+owGgbtyw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4132c8900d9c5d1d73bcfadda1fa1a76125eb679",
+        "rev": "f32cce50e2b2449dd9346abf3241be71128c815b",
         "type": "github"
       },
       "original": {
@@ -125,17 +125,17 @@
       },
       "locked": {
         "dir": "workstation-data",
-        "lastModified": 1768254426,
-        "narHash": "sha256-97l0nvh/7gXF7N3+M4oEWKlyWZEbRsOXp2ZNDISLPZc=",
+        "lastModified": 1768256923,
+        "narHash": "sha256-VlMrEFghc7N8bNDEYRl5jY1VSWVjE4SMuOUBAhZDYqQ=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "33d569656192269224e61b4c7ee7828d54c19284",
+        "rev": "05d9826d94c0176016c4e8ca95a0de804cd3a9e0",
         "type": "github"
       },
       "original": {
         "dir": "workstation-data",
         "owner": "DrSkitterbug",
-        "ref": "feat-wallpaper-storage-and-rotation",
+        "ref": "feat-open-here-menu",
         "repo": "homelab",
         "type": "github"
       }

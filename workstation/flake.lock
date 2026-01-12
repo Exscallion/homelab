@@ -1,6 +1,50 @@
 {
   "nodes": {
+    "agenix": {
+      "inputs": {
+        "darwin": [],
+        "home-manager": "home-manager",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1762618334,
+        "narHash": "sha256-wyT7Pl6tMFbFrs8Lk/TlEs81N6L+VSybPfiIgzU8lbQ=",
+        "owner": "ryantm",
+        "repo": "agenix",
+        "rev": "fcdea223397448d35d9b31f798479227e80183f6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ryantm",
+        "repo": "agenix",
+        "type": "github"
+      }
+    },
     "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "agenix",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1745494811,
+        "narHash": "sha256-YZCh2o9Ua1n9uCvrvi5pRxtuVNml8X2a03qIFfRKpFs=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "abfad3d2958c9e6300a883bd443512c55dfeb1be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "home-manager_2": {
       "inputs": {
         "nixpkgs": [
           "nixpkgs"
@@ -23,11 +67,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1767799921,
-        "narHash": "sha256-r4GVX+FToWVE2My8VVZH4V0pTIpnu2ZE8/Z4uxGEMBE=",
+        "lastModified": 1768028080,
+        "narHash": "sha256-50aDK+8eLvsLK39TzQhKNq50/HcXyP4hyxOYoPoVxjo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d351d0653aeb7877273920cd3e823994e7579b0b",
+        "rev": "d03088749a110d52a4739348f39a63f84bb0be14",
         "type": "github"
       },
       "original": {
@@ -39,11 +83,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1768158432,
-        "narHash": "sha256-bg+j/8jAs+kTfkwuM1dv38u6YymiaMspVYiN+dTQrow=",
+        "lastModified": 1768253240,
+        "narHash": "sha256-c8ATlw59YIEZuqsfrokXkggI8OyJDW7C14HuAuGzqfI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "bea58e23250e5e4b0127b11792c089c2e2671363",
+        "rev": "94b0b1bb3fbf4459e171b17857b4e7d32ae81774",
         "type": "github"
       },
       "original": {
@@ -54,9 +98,25 @@
     },
     "root": {
       "inputs": {
-        "home-manager": "home-manager",
+        "agenix": "agenix",
+        "home-manager": "home-manager_2",
         "nixpkgs": "nixpkgs",
         "userData": "userData"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     },
     "userData": {
@@ -65,16 +125,17 @@
       },
       "locked": {
         "dir": "workstation-data",
-        "lastModified": 1768156704,
-        "narHash": "sha256-UWPaYAv7DSBkYRj/0VGdGB415VLuijd63zwAQcYzHxw=",
+        "lastModified": 1768250320,
+        "narHash": "sha256-vGiyjBpSEIW3xHPWiBv/l00uvTp9mpuqHMyYsoeRQO4=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "5ce53e37157c376ef9e4b9231a44c2521bfd1b34",
+        "rev": "78307ff505117795f40246398053e8e210f05472",
         "type": "github"
       },
       "original": {
         "dir": "workstation-data",
         "owner": "DrSkitterbug",
+        "ref": "feat-wallpaper-storage-and-rotation",
         "repo": "homelab",
         "type": "github"
       }

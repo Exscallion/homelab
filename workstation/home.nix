@@ -1,7 +1,10 @@
-{ pkgs, userData, ... }:
+{ pkgs, userData, agenix, ... }:
 let
   user = "zeta";
   homeDir = "/home/${user}";
+  filesDir = "${homeDir}/.files/";
+  secretsDir = "${filesDir}/secrets";
+  wallpaperDir = "${filesDir}/wallpapers";
 in
 {
   home.username = user;
@@ -13,10 +16,20 @@ in
     xfce.mousepad
     krita
     swayimg
+    gnupg
+    agenix.packages.x86_64-linux.default
+    age
+    vscodium
   ];
 
-  # Lapce Nix module for IDE and text editing
-  programs.lapce.enable = true;
+  # Program Nix module for IDE and text editing
+  programs.vscode = {
+    enable = true;
+    package = pkgs.vscodium;
+    profiles.default.extensions = with pkgs.vscode-extensions; [
+      bbenoist.nix
+    ];
+  };
   
   # Manage file associations
   xdg = {
@@ -50,8 +63,32 @@ in
   home.file = {
     ".config/hypr" = { source = "${userData}/config/hypr"; recursive = true;};
     ".config/Thunar" = { source = "${userData}/config/Thunar"; recursive = true; };
+    ".files/scripts" = { source = "${userData}/files/scripts"; recursive = true; };  
+    ".files/secrets" = { source = "${userData}/files/secrets"; recursive = true; };  
     ".files/wallpapers" = { source = "${userData}/files/wallpapers"; recursive = true; };  
   };
+  
+  # Decrypt our tarballs.
+  # We need to reference age and tar from the packages as our PATH is unset during nixos-rebuild.
+  home.activation.unpackTarballs = ''
+    if [ -f "${secretsDir}/homelab-workstation-wallpapers.age-pub" ] \
+       && [ -f "${wallpaperDir}/wallpapers.tar.gz.age" ]; then
+
+      ${pkgs.age}/bin/age -d \
+        -i ${secretsDir}/homelab_workstation_wallpapers.age-priv \
+        -o ${wallpaperDir}/wallpapers.tar.gz \
+        ${wallpaperDir}/wallpapers.tar.gz.age
+
+
+      ${pkgs.gnutar}/bin/tar \
+        --use-compress-program=${pkgs.gzip}/bin/gzip \
+        -xvf ${wallpaperDir}/wallpapers.tar.gz \
+        -C ${wallpaperDir}
+    else
+      echo "Missing tarball or the secret to unpack wallpaper archive."
+    fi
+  '';
+
 
   home.stateVersion = "25.11";
 }

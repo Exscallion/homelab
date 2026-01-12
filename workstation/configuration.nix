@@ -84,7 +84,7 @@
   environment.systemPackages = with pkgs; [
      # Hyprland
      waybar
-     hyprpaper
+     swaybg
      hyprlock
      hypridle
 

@@ -69,6 +69,7 @@ in
   };
   
   # Decrypt our tarballs.
+  # We need to reference age and tar from the packages as our PATH is unset during nixos-rebuild.
   home.activation.unpackTarballs = ''
     if [ -f "${secretsDir}/homelab-workstation-wallpapers.age-pub" ] \
        && [ -f "${wallpaperDir}/wallpapers.tar.gz.age" ]; then

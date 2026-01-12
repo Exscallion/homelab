@@ -10,7 +10,7 @@ declare -A PROGRAMS=(
 )
 
 choice="$(printf '%s\n' "${!PROGRAMS[@]}" \
-  | wofi --dmenu -p "Which application do you want to open at $(pwd)")"
+  | wofi --dmenu -p "Which application do you want to open at $DIR")"
 
 [[ -z $choice ]] && exit 0
 

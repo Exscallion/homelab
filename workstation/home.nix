@@ -2,6 +2,9 @@
 let
   user = "zeta";
   homeDir = "/home/${user}";
+  filesDir = "${homeDir}/.files/";
+  secretsDir = "${filesDir}/secrets";
+  wallpaperDir = "${filesDir}/wallpapers";
 in
 {
   home.username = user;
@@ -64,6 +67,27 @@ in
     ".files/secrets" = { source = "${userData}/files/secrets"; recursive = true; };  
     ".files/wallpapers" = { source = "${userData}/files/wallpapers"; recursive = true; };  
   };
+  
+  # Decrypt our tarballs.
+  home.activation.unpackTarballs = ''
+    if [ -f "${secretsDir}/homelab-workstation-wallpapers.age-pub" ] \
+       && [ -f "${wallpaperDir}/wallpapers.tar.gz.age" ]; then
+
+      ${pkgs.age}/bin/age -d \
+        -i ${homeDir}/.secrets/homelab_workstation_wallpapers.age-priv \
+        -o ${homeDir}/.files/wallpapers/wallpapers.tar.gz \
+        ${homeDir}/.files/wallpapers/wallpapers.tar.gz.age
+
+
+      ${pkgs.gnutar}/bin/tar \
+        --use-compress-program=${pkgs.gzip}/bin/gzip \
+        -xvf ${homeDir}/.files/wallpapers/wallpapers.tar.gz \
+        -C ${homeDir}/.files/wallpapers
+    else
+      echo "Missing tarball or the secret to unpack wallpaper archive.
+    fi
+  '';
+
 
   home.stateVersion = "25.11";
 }

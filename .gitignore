@@ -11,3 +11,8 @@
 
 # nohup output
 nohup.out
+
+# Don't commit unencrypted archives.
+*.tar
+*.tar.gz
+*.zip

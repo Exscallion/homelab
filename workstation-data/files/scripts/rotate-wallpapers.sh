@@ -5,8 +5,7 @@
 
 WALLPAPER_FILES=~/.files/wallpapers
 
-#DAY_COUNT=$(date +%-j)
-DAY_COUNT=6
+DAY_COUNT=$(date +%-j)
 WALLPAPER_COUNT=$(ls -l $WALLPAPER_FILES | grep ^d | wc -l)
 WALLPAPER_INDEX=$(($DAY_COUNT % $WALLPAPER_COUNT + 1))
 WALLPAPER_DIR=$(ls -d $WALLPAPER_FILES/* | sort | sed -n $WALLPAPER_INDEX"p")
@@ -47,7 +46,3 @@ else
   echo "Setting right monitor (fill) to $FILL_FILE";
   swaybg -o $RIGHT_MONITOR -i $WALLPAPER_DIR/$FILL_FILE -m fill &
 fi
-
-# swaybg -o DP-1 -i "$WP_DP1" -m fill &
-# swaybg -o DP-2 -i "$WP_DP2" -m fill &
-# swaybg -o HDMI-1-A -i "$WP_HDMI1" -m fill &

@@ -24,4 +24,16 @@
 	<startup-notify/>
 	<directories/>
 </action>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open here...</name>
+	<submenu></submenu>
+	<unique-id>1767465364423549-1</unique-id>
+	<command>~/.files/scripts/open-here.sh %f</command>
+	<description>Open the image gallery in current directory</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
 </actions>

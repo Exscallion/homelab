@@ -6,7 +6,7 @@
 WALLPAPER_FILES=~/.files/wallpapers
 
 #DAY_COUNT=$(date +%-j)
-DAY_COUNT=2
+DAY_COUNT=6
 WALLPAPER_COUNT=$(ls -l $WALLPAPER_FILES | grep ^d | wc -l)
 WALLPAPER_INDEX=$(($DAY_COUNT % $WALLPAPER_COUNT + 1))
 WALLPAPER_DIR=$(ls -d $WALLPAPER_FILES/* | sort | sed -n $WALLPAPER_INDEX"p")

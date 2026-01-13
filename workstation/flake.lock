@@ -125,16 +125,17 @@
       },
       "locked": {
         "dir": "workstation-data",
-        "lastModified": 1768294683,
-        "narHash": "sha256-zZKg3t4Znv1EF6BFEorkeWSITzWObXIgrIjd4XNd7TA=",
+        "lastModified": 1768298946,
+        "narHash": "sha256-EpQp89x4ikSPfmi7exGcVkJvxq1SU0nCXu9mJGc1qe0=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "4b583dc26f51b96ecac958f5dd9986792b5256ae",
+        "rev": "83955c5890fb4e408d457811d53cc1f99468ae51",
         "type": "github"
       },
       "original": {
         "dir": "workstation-data",
         "owner": "DrSkitterbug",
+        "ref": "feat-system-cleanup",
         "repo": "homelab",
         "type": "github"
       }

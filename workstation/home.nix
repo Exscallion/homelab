@@ -63,7 +63,9 @@ in
   # Let home manager manage the configuration and other files.
   home.file = {
     ".config/hypr" = { source = "${userData}/config/hypr"; recursive = true;};
+    ".config/mako" = { source = "${userData}/config/mako"; recursive = true;};
     ".config/Thunar" = { source = "${userData}/config/Thunar"; recursive = true; };
+    
     ".files/scripts" = { source = "${userData}/files/scripts"; recursive = true; };  
     ".files/secrets" = { source = "${userData}/files/secrets"; recursive = true; };  
     ".files/wallpapers" = { source = "${userData}/files/wallpapers"; recursive = true; };  

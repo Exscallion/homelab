@@ -102,6 +102,9 @@
      # Greeter
      tuigreet
 
+     #Notification daemon
+     mako
+
      # Misc
      nano
      git

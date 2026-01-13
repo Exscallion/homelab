@@ -42,8 +42,7 @@ sudo nixos-rebuild switch --flake .#palica
 
 # Reload a bunch of stuff
 echo "*** Restarting hyprpaper."
-pkill hyprpaper
-nohup hyprpaper >/dev/null 2>&1 &
+~/.files/scripts/rotate-wallpapers.sh
 
 echo "*** Reloading hyprland."
 hyprctl reload

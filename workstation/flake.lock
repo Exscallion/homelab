@@ -83,11 +83,19 @@
     },
     "nixpkgs_2": {
       "locked": {
+<<<<<<< HEAD
         "lastModified": 1768299223,
         "narHash": "sha256-Nwif7IyCUZgqM7SVreViIN3cehjEW3JkA1f1xYGmdV8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
         "rev": "d846811f2ad381bd24b750d219512251d24e46c4",
+=======
+        "lastModified": 1768300036,
+        "narHash": "sha256-+pzwdzEIpUowdCJxU9+7NUVWnj9aGI8uaBN0+wTkzAk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "8e3fa0410642a5a341d9d810ffa80dfa4feae87c",
+>>>>>>> fe1e942 (chore(ws): Fix rebuild script reference hyprpaper)
         "type": "github"
       },
       "original": {
@@ -125,17 +133,28 @@
       },
       "locked": {
         "dir": "workstation-data",
+<<<<<<< HEAD
         "lastModified": 1768299991,
         "narHash": "sha256-uoXAxVZ/z7iiZEO2Ajbj8gPo0zlVnLApD0xb00EXnso=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
         "rev": "c4737b4722cb72cc482bb1c2a06ed33cdfcad461",
+=======
+        "lastModified": 1768300254,
+        "narHash": "sha256-orGnbBaf2Rh904yjeFQwINKhMIxWOsHE1UmdLuSa6b0=",
+        "owner": "DrSkitterbug",
+        "repo": "homelab",
+        "rev": "830a37507e3b02e1d68d310c3e0a36fd7d48648d",
+>>>>>>> fe1e942 (chore(ws): Fix rebuild script reference hyprpaper)
         "type": "github"
       },
       "original": {
         "dir": "workstation-data",
         "owner": "DrSkitterbug",
+<<<<<<< HEAD
         "ref": "feat-system-cleanup",
+=======
+>>>>>>> fe1e942 (chore(ws): Fix rebuild script reference hyprpaper)
         "repo": "homelab",
         "type": "github"
       }

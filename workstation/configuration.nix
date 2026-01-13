@@ -143,11 +143,12 @@
     options = "--delete-older-than 3d";
   };
 
+  # Aaaand now this is user specific, fix this in the future.
   systemd.services.pruneSystemGenerations = {
     description = "Keep only the latest 5 generations";
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "~/.files/scripts/cleanup-system.sh";
+      ExecStart = "/home/zeta/.files/scripts/cleanup-system.sh";
     };
   };
 

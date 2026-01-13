@@ -103,6 +103,7 @@
      tuigreet
 
      #Notification daemon
+     libnotify
      mako
 
      # Misc

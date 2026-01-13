@@ -83,11 +83,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1768301452,
-        "narHash": "sha256-k4SnT0eNJR3mKDCYmkMLe9euB1quVjovDbnsqe225q4=",
+        "lastModified": 1768302052,
+        "narHash": "sha256-y6pgialcoTiN+lzP0j/44SXl6hJFehQmPKh+Xz/EOBg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "896efff2e4d1e0c5d2073358f1ef26099f1f0c93",
+        "rev": "b61eca130c64b16f629ce33b5cbb623f730266bc",
         "type": "github"
       },
       "original": {
@@ -125,17 +125,16 @@
       },
       "locked": {
         "dir": "workstation-data",
-        "lastModified": 1768302014,
-        "narHash": "sha256-o3jxoxtuT9JWQRVPTnpWPG8LgkoBTh5NwOMn/dDNieM=",
+        "lastModified": 1768302281,
+        "narHash": "sha256-3F1xQiGJ9bRUVNdHMyZBCZtHRkGiMbF2JppK280s5Fg=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "7fa8bd552bbc7ae50ed5a81498469dd8a25bcbe6",
+        "rev": "1b5355810c2d83fce0e1f93f8a462b3994107b12",
         "type": "github"
       },
       "original": {
         "dir": "workstation-data",
         "owner": "DrSkitterbug",
-        "ref": "feat-notification-daemon",
         "repo": "homelab",
         "type": "github"
       }

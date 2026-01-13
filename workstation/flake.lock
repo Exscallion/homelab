@@ -83,11 +83,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1768256272,
-        "narHash": "sha256-35q4qf/CCyfQvED/VgC48Smx+GAokPHo6l+owGgbtyw=",
+        "lastModified": 1768299223,
+        "narHash": "sha256-Nwif7IyCUZgqM7SVreViIN3cehjEW3JkA1f1xYGmdV8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f32cce50e2b2449dd9346abf3241be71128c815b",
+        "rev": "d846811f2ad381bd24b750d219512251d24e46c4",
         "type": "github"
       },
       "original": {
@@ -125,17 +125,17 @@
       },
       "locked": {
         "dir": "workstation-data",
-        "lastModified": 1768256923,
-        "narHash": "sha256-VlMrEFghc7N8bNDEYRl5jY1VSWVjE4SMuOUBAhZDYqQ=",
+        "lastModified": 1768299991,
+        "narHash": "sha256-uoXAxVZ/z7iiZEO2Ajbj8gPo0zlVnLApD0xb00EXnso=",
         "owner": "DrSkitterbug",
         "repo": "homelab",
-        "rev": "05d9826d94c0176016c4e8ca95a0de804cd3a9e0",
+        "rev": "c4737b4722cb72cc482bb1c2a06ed33cdfcad461",
         "type": "github"
       },
       "original": {
         "dir": "workstation-data",
         "owner": "DrSkitterbug",
-        "ref": "feat-open-here-menu",
+        "ref": "feat-system-cleanup",
         "repo": "homelab",
         "type": "github"
       }

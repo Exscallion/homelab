@@ -7,6 +7,7 @@
     ];
 
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Zen kernel
@@ -135,6 +136,35 @@
       };
     };
   };
+
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 3d";
+  };
+
+  # Aaaand now this is user specific, fix this in the future.
+  systemd.services.pruneSystemGenerations = {
+    description = "Keep only the latest 5 generations";
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "/home/zeta/.files/scripts/cleanup-system.sh";
+    };
+  };
+
+  systemd.timers.pruneSystemGenerations = {
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnCalendar = "daily";
+      Persistent = true;
+    };
+  };
+
+  services.journald.extraConfig = ''
+    SystemMaxUse=500M
+    SystemKeepFree=500M
+    MaxRetentionSec=3day
+  '';
 
   system.stateVersion = "25.11";
 }

@@ -6,6 +6,7 @@ let
   privSecretsDir = "${homeDir}/.secrets";
   pubSecretsDir = "${filesDir}/secrets";
   wallpaperDir = "${filesDir}/wallpapers";
+  scriptDir = "${filesDir}/scripts";
 in
 {
   home.username = user;
@@ -48,6 +49,11 @@ in
       };
     };
   };
+
+  # Add our scripts to the paths location.
+  home.sessionVariables = {
+    PATH = "${scriptDir}:${builtins.getEnv "PATH"}";
+  }
   
   # Clean the folders upon new install.
   # - Clean configuration folders
@@ -58,11 +64,13 @@ in
 
     rm -rf ${homeDir}/.cache/BraveSoftware
     rm -rf ${homeDir}/.cache/fontconfig
+
+    rm -rf ${homeDir}/.files/wallpapers
   '';
   
   # Let home manager manage the configuration and other files.
   home.file = {
-    ".config/hypr" = { source = "${userData}/config/hypr"; recursive = true;};
+    ".config/hypr" = { source = "${userData}/config/hypr"; recursive = true; };
     ".config/mako" = { source = "${userData}/config/mako"; recursive = true;};
     ".config/Thunar" = { source = "${userData}/config/Thunar"; recursive = true; };
     

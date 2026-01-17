@@ -7,7 +7,7 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    userData.url = "github:DrSkitterbug/homelab?dir=workstation-data";
+    userData.url = "github:DrSkitterbug/homelab/feat-hyprland-controls?dir=workstation-data";
     
     agenix = {
       url = "github:ryantm/agenix";

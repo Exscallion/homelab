@@ -3,6 +3,20 @@
 #! nix-shell -p bash github-cli
 #! nix-shell -I nixpkgs=https://github.com/NixOS/nixpkgs/archive/refs/tags/25.11.tar.gz
 
+
+USE_LOCAL_DATA=0
+LOCAL_DATA="../workstation-data"
+
+for arg in "$@"; do
+    case $arg in
+        --use-local-data)
+            USE_LOCAL_DATA=1
+            ;;
+        *)
+            ;;
+    esac
+done
+
 echo "*** Running pre-flight checks..."
 # This technically is not a reproducible script, as it relies on the host systems path.
 # But importing nix, sudo etc. into this script is a hassle. But if you use my flake, you'll guarenteed have these packages.
@@ -38,7 +52,13 @@ nix flake update userData
 
 # Rebuild and switch.
 echo "*** Rebuilding and switching to new NixOS generation"
-sudo nixos-rebuild switch --flake .#palica
+
+if [ "$USE_LOCAL_DATA" -eq 1 ]; then
+  echo "*** Using local data instead of Git."
+  sudo nixos-rebuild switch --flake .#palica --override-input userData $LOCAL_DATA
+else 
+  sudo nixos-rebuild switch --flake .#palica
+fi
 
 # Reload a bunch of stuff
 echo "*** Restarting hyprpaper."

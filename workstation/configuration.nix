@@ -152,7 +152,7 @@
     description = "Keep only the latest 5 generations";
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "/home/zeta/.files/scripts/cleanup-system.sh";
+      ExecStart = "/home/zeta/.files/scripts/util/cleanup-system.sh";
     };
   };
 
